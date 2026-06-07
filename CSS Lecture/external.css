@@ -1,0 +1,7 @@
+small{
+    color: red;
+    text-transform: uppercase;
+    world-spacing: 15px;
+    letter-spacing: 2px;
+    line-height: 48px;
+}
