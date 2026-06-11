@@ -1,0 +1,77 @@
+:root {
+    --bg-color: #0d0208;          /* Cyber Dark နောက်ခံ */
+    --accent-color: #ff3366;      /* အသည်းပုံအတွက် Neon အနီ/ပန်းရောင် */
+    --text-color: #ffffff;        /* စာသား အဖြူရောင် */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Padauk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* လှုပ်ရှားနေမည့် နီယွန်အသည်းပုံ နောက်ခံ */
+.apology-container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px 30px;
+    background: rgba(13, 2, 8, 0.75); /* စာသားဖတ်ရလွယ်အောင် မှန်အမည်းခံထားခြင်း */
+    border-radius: 25px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(255, 51, 102, 0.3);
+    border: 2px solid var(--accent-color);
+    
+    /* အသည်းပုံလို တုန်ခါနေမည့် Animation စနစ် */
+    animation: heartbeat 1.5s infinite alternate;
+}
+
+/* အဓိက စာသားများ */
+.title {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.content-text {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.respect {
+    color: #aaaaaa;
+    font-size: 1rem;
+}
+
+.name {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* နှလုံးခုန်သလို ရင်ခုန်လှုပ်ရှားစေမည့် ကုတ်ပိုင်း */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
+    }
+    100% {
+        transform: scale(1.03);
+        box-shadow: 0 0 50px rgba(255, 51, 102, 0.6);
+    }
+}
